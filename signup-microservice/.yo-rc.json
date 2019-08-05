@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "io.newage.signup"
+    },
+    "jhipsterVersion": "6.2.0",
+    "applicationType": "microservice",
+    "baseName": "signup",
+    "packageName": "io.newage.signup",
+    "packageFolder": "io/newage/signup",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "no",
+    "devDatabaseType": "no",
+    "prodDatabaseType": "no",
+    "searchEngine": false,
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": "consul",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "NTk3YWNkY2JkMWQ2Y2ZkYzcyNjQxYWU3MjNiNzg0YTczMGQ2YzExYmJlNTA4NGU5ZGRlZjNmMjlmMGUwODYyOTAyODQ3YmUyNGNhMTZlMDE0MDc2NWVjYWUwZTllYWVmZWQ4OGFiM2VmMjY1MDFmYTEzNWFkODc0ZTUwZTMxYmU=",
+    "testFrameworks": [
+      "cucumber"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
