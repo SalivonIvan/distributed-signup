@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "io.newage.persistence"
+    },
+    "jhipsterVersion": "6.2.0",
+    "applicationType": "microservice",
+    "baseName": "persistence",
+    "packageName": "io.newage.persistence",
+    "packageFolder": "io/newage/persistence",
+    "serverPort": "8082",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": "consul",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "YjYyZDg4N2I5NTUyOTNjZDg2ZDE1NjkxZjExN2Y3OGExZDNmNWQwYWYwOWNhMjE4ODBhNWFhMzMzMWQzNjIzZjIyMzNiNTI0MTczOWVkYjRjNzg2YzM0NzgyZDYwZjJkNTEwNGFlZmUxYzZlMjNjYTgwYjMzYzc2ZDgwZmNkMzg=",
+    "testFrameworks": [
+      "cucumber"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
