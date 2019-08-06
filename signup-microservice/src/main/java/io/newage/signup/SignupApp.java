@@ -1,13 +1,10 @@
 package io.newage.signup;
 
+import io.github.jhipster.config.JHipsterConstants;
 import io.newage.signup.config.ApplicationProperties;
 import io.newage.signup.config.DefaultProfileUtil;
-
-import io.github.jhipster.config.JHipsterConstants;
-
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,12 +17,11 @@ import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Collection;
 
+@Slf4j
 @SpringBootApplication
 @EnableConfigurationProperties({ApplicationProperties.class})
 @EnableDiscoveryClient
 public class SignupApp implements InitializingBean {
-
-    private static final Logger log = LoggerFactory.getLogger(SignupApp.class);
 
     private final Environment env;
 
@@ -101,6 +97,6 @@ public class SignupApp implements InitializingBean {
             configServerStatus = "Not found or not setup for this application";
         }
         log.info("\n----------------------------------------------------------\n\t" +
-                "Config Server: \t{}\n----------------------------------------------------------", configServerStatus);
+            "Config Server: \t{}\n----------------------------------------------------------", configServerStatus);
     }
 }
