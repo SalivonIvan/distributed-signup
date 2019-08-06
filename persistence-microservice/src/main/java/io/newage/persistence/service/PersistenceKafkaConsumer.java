@@ -11,9 +11,9 @@ import java.io.IOException;
 public class PersistenceKafkaConsumer {
 
     private final Logger log = LoggerFactory.getLogger(PersistenceKafkaConsumer.class);
-    private static final String TOPIC = "topic_persistence";
+    private static final String TOPIC = "topic_signup";
 
-    @KafkaListener(topics = "topic_persistence", groupId = "group_id")
+    @KafkaListener(topics = "topic_signup", groupId = "persistence-mic")
     public void consume(String message) throws IOException {
         log.info("Consumed message in {} : {}", TOPIC, message);
     }
