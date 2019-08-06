@@ -18,6 +18,9 @@ public class SignupRequest implements Serializable {
     @ApiModelProperty(hidden = true)
     private static final long serialVersionUID = -5351304218739402635L;
 
+    @ApiModelProperty(hidden = true)
+    private String uuid;
+
     @NotBlank
     @ApiModelProperty(example = "test@test.com", required = true, value = "The value is email.")
     private String email;
