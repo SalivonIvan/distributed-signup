@@ -1,6 +1,6 @@
 # distributed-signup
 
-This application are part of a microservices architecture.
+This application are a microservices architecture.
 
 This application is configured for Service Discovery and Configuration with Consul. On launch, it will refuse to start if it is not able to connect to Consul at [http://localhost:8500](http://localhost:8500).
 
