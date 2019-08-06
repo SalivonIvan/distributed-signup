@@ -24,6 +24,7 @@ public class SignupResourceTest {
 
     private static final String DEFAULT_PASSWORD = "admin";
     private static final String DEFAULT_EMAIL = "admin@gmail.com";
+    private static final String SIGNUP_URL = "/api/signup";
 
     @Autowired
     private SignupKafkaProducer kafkaProducer;
@@ -39,8 +40,9 @@ public class SignupResourceTest {
     }
 
     @Test
+    @SuppressWarnings("squid:S00112")
     public void signupOk() throws Exception {
-        restMockMvc.perform(post("/api/signup")
+        restMockMvc.perform(post(SIGNUP_URL)
             .contentType(APPLICATION_JSON_UTF8)
             .content(TestUtil.convertObjectToJsonBytes(SignupRequest.builder()
                 .email(DEFAULT_EMAIL)
@@ -50,8 +52,9 @@ public class SignupResourceTest {
     }
 
     @Test
+    @SuppressWarnings("squid:S00112")
     public void signupBadRequest() throws Exception {
-        restMockMvc.perform(post("/api/signup")
+        restMockMvc.perform(post(SIGNUP_URL)
             .contentType(APPLICATION_JSON_UTF8)
             .content(TestUtil.convertObjectToJsonBytes(SignupRequest.builder()
                 .email("")
@@ -59,7 +62,7 @@ public class SignupResourceTest {
                 .build())))
             .andExpect(status().isBadRequest());
 
-        restMockMvc.perform(post("/api/signup")
+        restMockMvc.perform(post(SIGNUP_URL)
             .contentType(APPLICATION_JSON_UTF8)
             .content(TestUtil.convertObjectToJsonBytes(SignupRequest.builder()
                 .email(DEFAULT_EMAIL)
@@ -67,7 +70,7 @@ public class SignupResourceTest {
                 .build())))
             .andExpect(status().isBadRequest());
 
-        restMockMvc.perform(post("/api/signup")
+        restMockMvc.perform(post(SIGNUP_URL)
             .contentType(APPLICATION_JSON_UTF8)
             .content(TestUtil.convertObjectToJsonBytes(SignupRequest.builder()
                 .email(null)
