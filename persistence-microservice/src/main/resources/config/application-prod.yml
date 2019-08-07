@@ -37,7 +37,12 @@ spring:
       group-id: persistence-mic
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.JsonDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+          spring:
+             json:
+                type:
+                  mapping: signup:io.newage.persistence.domain.Profile
   cloud:
     consul:
       discovery:
