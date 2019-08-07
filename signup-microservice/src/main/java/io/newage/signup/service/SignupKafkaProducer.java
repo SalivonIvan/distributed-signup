@@ -2,6 +2,7 @@ package io.newage.signup.service;
 
 import io.newage.signup.web.rest.model.SignupRequest;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ public class SignupKafkaProducer {
 
     private KafkaTemplate<String, SignupRequest> kafkaTemplate;
 
+    @Autowired
     public SignupKafkaProducer(KafkaTemplate<String, SignupRequest> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
