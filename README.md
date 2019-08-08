@@ -33,7 +33,7 @@ To stop it and remove the container, run:
 
     docker-compose -f docker-compose/mongodb.yml down
 
-You can also fully dockerize your application and all the services that it depends on.
+You can also fully dockerize this application and all the services that it depends on.
 To achieve this, first build a docker image of your app by running:
 
     1. cd persistence-microservice
@@ -46,3 +46,11 @@ To achieve this, first build a docker image of your app by running:
 Then run:
 
     docker-compose -f docker-compose/app.yml up -d
+    
+## Test the example:
+After fully run application, in a new shell:
+
+    curl -X POST "https://localhost:8081/api/signup" -H "accept: application/json;charset=UTF-8" -H "Content-Type: application/json" -d "{ \"email\": \"test@test.com\", \"password\": 123456}"
+
+Then can check the result in the mongo database.
+Signup data must be in **'persistence'** schema, collection is **'profile'**.
