@@ -50,7 +50,7 @@ Then run:
 ## Test the example:
 After fully run application, in a new shell:
 
-    curl -X POST "https://localhost:8081/api/signup" -H "accept: application/json;charset=UTF-8" -H "Content-Type: application/json" -d "{ \"email\": \"test@test.com\", \"password\": 123456}"
+    curl -X POST "https://{host}:8081/api/signup" -H "accept: application/json;charset=UTF-8" -H "Content-Type: application/json" -d "{ \"email\": \"test@test.com\", \"password\": 123456}"
 
 Then can check the result in the mongo database.
 Signup data must be in **'persistence'** schema, collection is **'profile'**.
