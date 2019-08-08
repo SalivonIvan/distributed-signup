@@ -22,7 +22,7 @@ public class ProfileKafkaConsumer {
         this.profileRepository = profileRepository;
     }
 
-    @KafkaListener(topics = "topic_signup", groupId = "persistence-mic")
+    @KafkaListener(topics = TOPIC, groupId = "persistence-mic")
     public void consume(Profile profile) throws IOException {
         log.info("Consumed message in {} : {}", TOPIC, profile);
         profileRepository.save(profile);

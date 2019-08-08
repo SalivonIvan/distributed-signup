@@ -18,6 +18,8 @@ spring:
     name: signup
   kafka:
     bootstrap-servers: ${spring.embedded.kafka.brokers}
+    producer:
+          bootstrap-servers: ${spring.embedded.kafka.brokers}
   mail:
     host: localhost
   main:

@@ -11,8 +11,7 @@ services:
       - SPRING_DATA_MONGODB_URI=mongodb://persistence-mongodb:27017
       - SPRING_DATA_MONGODB_DATABASE=persistence
       - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
-      - SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS=kafka:9092
-      - SPRING_KAFKA_PRODUCER_BOOTSTRAP_SERVERS=kafka:9092
+      - SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS=kafka:29092
   signup-app:
     image: signup
     environment:
@@ -22,8 +21,7 @@ services:
       - SPRING_CLOUD_CONSUL_HOST=consul
       - SPRING_CLOUD_CONSUL_PORT=8500
       - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
-      - SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS=kafka:9092
-      - SPRING_KAFKA_PRODUCER_BOOTSTRAP_SERVERS=kafka:9092
+      - SPRING_KAFKA_PRODUCER_BOOTSTRAP_SERVERS=kafka:29092
   persistence-mongodb:
     extends:
       file: mongodb.yml
@@ -32,9 +30,6 @@ services:
     extends:
       file: kafka.yml
       service: kafka
-    environment:
-      - KAFKA_ADVERTISED_HOST_NAME=kafka
-      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
   zookeeper:
     extends:
       file: kafka.yml
